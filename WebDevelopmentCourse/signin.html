@@ -1,0 +1,59 @@
+<!-- signin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Elevate-Ed</title>
+    <link rel="stylesheet" href="auth-styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-left">
+            <div class="auth-logo">
+                <img src="https://api.iconify.design/lucide:graduation-cap.svg" alt="Logo" class="logo-icon">
+                <span>Elevate-Ed</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                 alt="Education" class="auth-image">
+        </div>
+        <div class="auth-right">
+            <div class="auth-form-container">
+                <h2>Welcome Back!</h2>
+                <p class="auth-subtitle">Continue your learning journey</p>
+                
+                <form action="signin.php" method="POST" class="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="auth-button">Sign In</button>
+                </form>
+                
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+                
+                <button class="google-button">
+                    <img src="https://api.iconify.design/flat-color-icons:google.svg" alt="Google" class="google-icon">
+                    Continue with Google
+                </button>
+                
+                <p class="auth-switch">
+                    Don't have an account? <a href="signup.html">Sign up here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

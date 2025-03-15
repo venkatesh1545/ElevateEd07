@@ -1,0 +1,323 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #fff5eb 0%, #ffe4cc 100%);
+    min-height: 100vh;
+    color: #1a1a1a;
+    line-height: 1.5;
+    padding-top: 60px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.logo i {
+    width: 48px;
+    height: 48px;
+    color: #f97316;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.skill-form {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.add-skill-btn {
+    background-color: #f1981d;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-skill-btn:hover {
+    background-color: #e08710;
+}
+/* Grid layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Skills grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Skill cards */
+.skill-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-container {
+    background: #fff5eb;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+}
+
+.icon-container i {
+    width: 24px;
+    height: 24px;
+    color: #f97316;
+}
+
+.skill-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.skill-info p {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Progress card */
+.progress-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.progress-header i {
+    width: 24px;
+    height: 24px;
+    color: #f97316;
+}
+
+.progress-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.progress-bar-container {
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 0.5rem;
+    background: #f1f1f1;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #f97316;
+    border-radius: 999px;
+    transition: width 0.3s ease;
+}
+
+.progress-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.stat-box {
+    background: #fff5eb;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #f97316;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #666;
+}
+.view-progress-btn {
+    background-color: #f1981d; /* Green color */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-left: 10px;
+}
+
+.view-progress-btn:hover {
+    background-color: #c2410c;
+    transform: scale(1.05);
+}
+
+.view-progress-btn:active {
+    background-color: #c2410c;
+    transform: scale(0.98);
+}
+
+/* Roadmap sections */
+.roadmap-sections {
+    position: relative;
+    margin-top: 20px;
+}
+
+.roadmap-container {
+    display: none;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.roadmap-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.roadmap-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.roadmap-section {
+    border-left: 2px solid #ffe4cc;
+    padding-left: 1rem;
+}
+
+.roadmap-section h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.add-skill-btn {
+    background-color: #f1981d; /* Orange color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-skill-btn:hover {
+    background-color: #f1981d; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.add-skill-btn:active {
+    background-color: #c2410c; /* Even darker on click */
+    transform: scale(0.98); /* Slight shrink effect */
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.topics-grid li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.topics-grid li i {
+    width: 16px;
+    height: 16px;
+    color: #f97316;
+}

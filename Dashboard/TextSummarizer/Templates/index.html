@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Summarizer</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Content Summarizer</h1>
+            <p>Select your content type and get an AI-powered summary in seconds</p>
+        </div>
+
+        <div class="card">
+            <form id="summarizeForm">
+                <div class="form-group">
+                    <label for="sourceType">Source Type</label>
+                    <select id="sourceType" required>
+                        <option value="web">Web Page URL</option>
+                        <option value="pdf">PDF Document</option>
+                        <option value="docx">Word Document</option>
+                        <option value="txt">Text File</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="urlInputGroup">
+                    <label for="urlInput">Web Page URL</label>
+                    <div class="input-with-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        <input type="url" id="urlInput" placeholder="https://example.com">
+                    </div>
+                </div>
+
+                <div class="form-group hidden" id="fileInputGroup">
+                    <label for="fileInput">Upload File</label>
+                    <div class="file-upload">
+                        <input type="file" id="fileInput" class="hidden">
+                        <label for="fileInput" class="file-label">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <span id="fileName">Choose file</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span class="button-content">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        Generate Summary
+                    </span>
+                </button>
+            </form>
+
+            <div id="error" class="error hidden"></div>
+
+            <div id="summary" class="summary hidden">
+                <h2>Generated Summary</h2>
+                <p id="summaryText"></p>
+            </div>
+
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+                <p>Generating Summary...</p>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script/script.js"></script>
+</body>
+</html>

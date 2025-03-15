@@ -1,0 +1,76 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Elevate-Ed</title>
+    <link rel="stylesheet" href="auth-styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-left">
+            <div class="auth-logo">
+                <img src="https://api.iconify.design/lucide:graduation-cap.svg" alt="Logo" class="logo-icon">
+                <span>Elevate-Ed</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                 alt="Education" class="auth-image">
+        </div>
+        <div class="auth-right">
+            <div class="auth-form-container">
+                <h2>Create Account</h2>
+                <p class="auth-subtitle">Start your learning journey today</p>
+                
+                <form action="signup.php" method="POST">
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <button type="submit" class="auth-button">Sign Up</button>
+                </form>
+                
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+                
+                <button class="google-button">
+                    <img src="https://api.iconify.design/flat-color-icons:google.svg" alt="Google" class="google-icon">
+                    Continue with Google
+                </button>
+                
+                <p class="auth-switch">
+                    Already have an account? <a href="signin.html">Sign in here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
